@@ -1,1 +1,3 @@
-var text = "Hello"
+const addColumn = () => {
+    document.getElementById("temp").innerHTML = "Add Column Clicked"
+}
