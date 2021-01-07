@@ -2,9 +2,24 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+} */
+
+/* Below Works! */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 36px);
+    grid-template-rows: repeat(4, 36px);
+    grid-auto-rows: minmax(20px, auto);
+    grid-auto-columns: minmax(20px, auto);
+    grid-gap: 1rem;
+}
+
 .grid-item {
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    height:50px;
+    border: 2px solid #333;
+    height: 50px;
     width: 50px;
 }
 
@@ -14,14 +29,4 @@ body {
     padding: 10px 15px;
     background-color: #333;
     color: white
-}
-
-#add-column-btn {
-    text-decoration: none;
-}
-
-.grid-container {
-  display: grid;
-    display: flex;
-
 }
