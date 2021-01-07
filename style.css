@@ -3,7 +3,15 @@ body {
     background-color: #f4f4f4;
 }
 
+/* 
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+} */
+
 .button {
+    margin: 20px 0;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
@@ -12,10 +20,10 @@ body {
 }
 
 #main-table td {
-    margin: auto;
-    padding: 0;
     width: 50px;
     height: 50px;
     border: 1px solid black;
     background-color: white;
+    border-spacing: 0px;
+
 }

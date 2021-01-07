@@ -1,33 +1,26 @@
-// const addColumn = () => {
-//     document.getElementById("temp").innerHTML = "Add Column Clicked"
-// }
-
-// const addColumn = () => {
-//     const masterDiv = document.getElementsByClassName("grid-container")
-//     masterDiv[0].style.display = "block"
-//     const div = document.createElement("div")
-//     div.className = "grid-item"
-//     masterDiv[0].appendChild(div)
-// }
-
-// const addRow = () => {
-//     const masterDiv = document.getElementsByClassName("grid-container")
-//     masterDiv[0].style.display = "flex"
-//     const div = document.createElement("div")
-//     div.className = "grid-item"
-//     masterDiv[0].appendChild(div)
-// }
-
 const addColumn = () => {
-    const masterDiv = document.getElementsByClassName("grid-container")
-    const div = document.createElement("div")
-    div.className = "grid-item"
-    masterDiv[0].appendChild(div)
-}
+    const cols = document.getElementById("columns")
+    const columnCollection = cols.getElementsByTagName("td")
+    let colCount = 0
+    for (const col of columnCollection) {
+        colCount++
+        console.log('Column:', colCount)
+    }
+    const newCol = document.createElement("td")
+    cols.appendChild(newCol)
+    colCount++
+    console.log('Added 1 more col')
 
-const addRow = () => {
-    const masterDiv = document.getElementsByClassName("grid-container")
-    const div = document.createElement("div")
-    div.className = "grid-item"
-    masterDiv[0].appendChild(div)
+    const rows = document.getElementsByClassName("row")
+    console.log('rows', rows)
+
+    const dataPerRow = rows[0].getElementsByTagName("td").length
+    console.log(dataPerRow)
+
+    for (let i=0; i<rows.length; i++) {
+        for (let j=dataPerRow; j<colCount; j++) {
+            const node = document.createElement("td")
+            rows[i].appendChild(node)
+        }
+    }
 }
