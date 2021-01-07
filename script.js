@@ -14,3 +14,14 @@ Array.from(grids).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = 'red';
     }
   }));
+
+
+  Array.from (grids).forEach (x => x.addEventListener ('click', function () {
+
+    var newGrid = document.creatElement ('div')
+
+    newGrid.className = "grid-item"
+
+    gridParent[0].appendChild (newGrid)
+
+  }));
