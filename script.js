@@ -27,3 +27,16 @@ const addRow = () => {
         row.appendChild(data)
     }
 }
+
+// Removing logic
+
+// remove rows 1 by 1
+const delRow = () => {
+   
+}
+
+// removes columns 1 by 1
+const delCol = () => {
+    
+    }
+}
