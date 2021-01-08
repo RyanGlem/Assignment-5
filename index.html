@@ -8,52 +8,47 @@
 </head>
 
 <body>
-    <div class="buttons">
-        <button class="button" onclick="addColumn()">Add Column</button>
-        <h1 id="temp"></h1>
+    <div class="container">
+        <div class="buttons">
+            <button class="button" onclick="addColumn()">Add Column</button>
+        </div>
+
+        <div class="buttons">
+            <button class="button" onclick="addRow()">Add Row</button>
+        </div>
+
+        <head>
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <div>
+            <table id="main-table">
+                <thead>
+                    <tr id="columns">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="row">
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="row">
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="row">
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-    <div class="buttons">
-        <button class="button" onclick="addRow()">Add Row</button>
-        <h1 id="temp"></h1>
-    </div>
-
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <div class = "colors">
-        <span>Select Color</span>
-        <select id="colorSelect">
-            <option>Yellow</option>
-            <option>Blue</option>
-            <option>Red</option>
-            <option>Green</option>
-        </select>
-    </div>
-
-    <div>
-        <table id="main-table">
-            <thead>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </thead>
-
-            <tbody>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tbody>
-        </table>
-    </div>
-    
 
     <script src="script.js"></script>
 </body>

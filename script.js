@@ -39,11 +39,11 @@ console.log (colors.options.item(0))
 Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
 
 
-    if (colors.options.item(1).text == 'Yellow') {
+    if (colors.options.item(0).text == 'Yellow') {
 
         v.style.background = 'yellow'
 
-    } else if (colors.options.item(2).text == "Blue") {
+    } else if (colors.options.item(1).text == "Blue") {
 
         v.style.background = 'blue';
 
