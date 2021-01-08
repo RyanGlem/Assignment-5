@@ -8,28 +8,23 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="buttons">
-            <button class="button" onclick="addColumn()">Add Column</button>
+    <button class="button" onclick="addColumn()">Add Column</button>
+    <button class="button" onclick="addRow()">Add Row</button>
+    <button class="button" onclick="removeColumn()">Remove Column</button>
+    <button class="button" onclick="removeRow()">Remove Row</button>
+    <div class="menu">
+        <button i ="color-button">Select Color</button>
+        <div class="menu-content">
+            <option value="azure" id="azure"  onclick="changeBlue()">Blue</option>
+            <option value="azure" id="azure"  onclick="changeGreen()">Green</option>
         </div>
+    </div>
 
-        <div class="buttons">
-            <button class="button" onclick="addRow()">Add Row</button>
-        </div>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-        <div class="buttons">
-            <button class="button" onclick="removeColumn()">Remove Column</button>
-        </div>
-
-        <div class="buttons">
-            <button class="button" onclick="removeRow()">Remove Row</button>
-        </div>
-
-        <head>
-            <link rel="stylesheet" href="style.css">
-        </head>
-
-        <table id="main-table"></table>
+    <table id="main-table"></table>
     </div>
 
     <script src="script.js"></script>

@@ -20,3 +20,10 @@ body {
     border-spacing: 0px;
 
 }
+
+.menu-content {
+    display: none;
+}
+.menu:hover .menu-content {
+    display: block;
+}
