@@ -38,13 +38,12 @@ const colors = document.getElementById ("colorSelector")
 
 Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
 
-   // console.log (colors.options.item(0).text)
-    //console.log (colors.options.item(1).text)
-   // console.log (colors.options.item(2).text)
-    //console.log (colors.options.item(3).text)
+    //gets data from the options menu and stores it
     var colSel = colors.options[colors.selectedIndex].value
     console.log (colSel)
 
+
+    //if else statements that change depending on drop down color
 
     if (colSel == 'Yellow') {
 
@@ -63,3 +62,23 @@ Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
         v.style.background = 'green'
     }
   }));
+
+
+  function fill () {
+
+    if (tb.style.background == 'white') {
+
+        Array.from(tb).forEach(c => c.style.background == colSel)
+    }
+  }
+
+  function fillAll () {
+
+    Array.from(tb).forEach (c => c.style.background == colSel) 
+  }
+
+  function reset () {
+      if (tb.style.background !== 'white') {
+          Array.from(tb).forEarch (c => c.style.background == colSel)
+      }
+  }
