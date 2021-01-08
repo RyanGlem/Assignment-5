@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -6,13 +8,25 @@
 </head>
 
 <body>
+
+    <div class = "colors">
+        <span>Select Color</span>
+        <select id ="colorSelect">
+            <option>Yellow</option>
+            <option>Blue</option>
+            <option>Red</option>
+            <option>Green</option>
+        </select>
+    </div>
+
+
     <div class="container">
         <div class="buttons">
             <button class="button" onclick="addColumn()">Add Column</button>
         </div>
 
         <div class="buttons">
-            <button class="button" onclick="addRow()">Add Row</button>
+            <button class="button" onclick="addRow()" >Add Row</button>
         </div>
 
         <head>
@@ -20,9 +34,11 @@
         </head>
 
         <table id="main-table"></table>
+
+        <script src="script.js"></script>
     </div>
 
-    <script src="script.js"></script>
+    
 </body>
 
 </html>

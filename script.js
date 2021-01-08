@@ -32,11 +32,12 @@ const addRow = () => {
     masterDiv[0].appendChild(div)
 }
 
-const tb = document.getElementsByTagName ("td")
+const tb = document.getElementsByTagName ("main-table")
+const cells = tb.getElementsByTagName("td")
 const colors = document.getElementById ("colorSelector")
 
 
-Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
+Array.from(box).forEach(v => v.addEventListener('mouseover', function() {
 
     //gets data from the options menu and stores it
     var colSel = colors.options[colors.selectedIndex].value
@@ -68,17 +69,17 @@ Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
 
     if (tb.style.background == 'white') {
 
-        Array.from(tb).forEach(c => c.style.background == colSel)
+        Array.from(box).forEach(c => c.style.background == colSel)
     }
   }
 
   function fillAll () {
 
-    Array.from(tb).forEach (c => c.style.background == colSel) 
+    Array.from(box).forEach (c => c.style.background == colSel) 
   }
 
   function reset () {
       if (tb.style.background !== 'white') {
-          Array.from(tb).forEarch (c => c.style.background == colSel)
+          Array.from(box).forEarch (c => c.style.background == colSel)
       }
   }
