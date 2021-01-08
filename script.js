@@ -31,3 +31,28 @@ const addRow = () => {
     div.className = "grid-item"
     masterDiv[0].appendChild(div)
 }
+
+const tb = document.getElementsByTagName ("td")
+const colors = document.getElementById ("colorSelect")
+console.log (colors.options.item(0))
+
+Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
+
+
+    if (colors.options.item(1).text == 'Yellow') {
+
+        v.style.background = 'yellow'
+
+    } else if (colors.options.item(2).text == "Blue") {
+
+        v.style.background = 'blue';
+
+    } else if (colors.options.item(2).text == "Red") {
+
+        v.style.background = 'red'
+
+    } else if (colors.options.item(3).text == 'Green') {
+
+        v.style.background = 'green'
+    }
+  }));
