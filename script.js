@@ -1,16 +1,16 @@
 let columns = 0
 let rows = 0
 const mainTable = document.getElementById("main-table")
-let masterColor = "purple"
+let masterColor = "white"
 let color = false
 
 const addColumn = () => {
     columns += 1
 
-    const rows = document.getElementsByClassName("row")
+    const rows = document.getElementsByClassName("cell")
 
     for (let i = 0; i < rows.length; i++) {
-        rows[i].appendChild(initializer());
+        rows[i].appendChild(initializer())
     }
 }
 
@@ -19,7 +19,7 @@ const addRow = () => {
 
     const row = document.createElement("tr")
 
-    row.classList.add("row")
+    row.classList.add("cell")
 
     mainTable.appendChild(row)
 
@@ -54,7 +54,7 @@ let removeColumn = () => {
 
 const initializer = () => {
     const gridCell = document.createElement("td");
-    gridCell.classList.add("gridCell");
+    gridCell.classList.add("grid-cell");
     gridCell.classList.add("unfilled");
     gridCell.addEventListener("mousedown", e => color = true);
     gridCell.addEventListener("mousemove", e => {
@@ -77,4 +77,29 @@ function changeBlue () {
 
 function changeGreen () {
     masterColor = "green"
+}
+
+function changePurple () {
+    masterColor = "purple"
+}
+
+// function emptyColor() {
+//     console.log('empty colors active')
+//     let datas = document.getElementsByClassName("cell");
+//     let toArray = Array.from(datas)
+//     toArray.forEach(data =>
+//     {
+//         data.style.backgroundColor = null
+//         data.classList.remove(...data.classList)
+//         data.classList.add("row")
+//         data.classList.add("unfilled")
+//     });
+// }
+
+function emptyColor(){
+    let list = document.getElementsByClassName("grid-cell");
+    for(let i = 0; i < list.length; i++) {
+        list[i].style.backgroundColor = "white";
+        console.log(list[i].style.backgroundColor)
+    }
 }

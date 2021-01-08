@@ -12,11 +12,13 @@
     <button class="button" onclick="addRow()">Add Row</button>
     <button class="button" onclick="removeColumn()">Remove Column</button>
     <button class="button" onclick="removeRow()">Remove Row</button>
-    <div class="menu">
-        <button i ="color-button">Select Color</button>
+    <button class="button" onclick="emptyColor()">Empty Colors</button>
+    <div class="menu button">
+        <button i="color-button" class="special">Select Color</button>
         <div class="menu-content">
-            <option value="azure" id="azure"  onclick="changeBlue()">Blue</option>
-            <option value="azure" id="azure"  onclick="changeGreen()">Green</option>
+            <option class="sub-special" value="azure" id="azure"  onclick="changeBlue()">Blue</option>
+            <option class="sub-special" value="azure" id="azure"  onclick="changeGreen()">Green</option>
+            <option class="sub-special" value="azure" id="azure"  onclick="changePurple()">Purple</option>
         </div>
     </div>
 

@@ -4,6 +4,7 @@ body {
 }
 
 .button {
+    font-size: 20px;
     margin: 20px 0;
     border: none;
     border-radius: 5px;
@@ -26,4 +27,18 @@ body {
 }
 .menu:hover .menu-content {
     display: block;
+}
+
+.special {
+    padding: 10px;
+    background-color: coral;
+    font-size: 30px;
+    color: white;
+    border: none;
+}
+
+.sub-special {
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 5px;
 }
