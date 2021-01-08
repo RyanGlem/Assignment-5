@@ -1,27 +1,65 @@
+// const addColumn = () => {
+//     document.getElementById("temp").innerHTML = "Add Column Clicked"
+// }
 
-var grids = document.getElementsByClassName("grid-item")
-var gridParent = document.getElementsByClassName ("grid-container")
+// const addColumn = () => {
+//     const masterDiv = document.getElementsByClassName("grid-container")
+//     masterDiv[0].style.display = "block"
+//     const div = document.createElement("div")
+//     div.className = "grid-item"
+//     masterDiv[0].appendChild(div)
+// }
+
+// const addRow = () => {
+//     const masterDiv = document.getElementsByClassName("grid-container")
+//     masterDiv[0].style.display = "flex"
+//     const div = document.createElement("div")
+//     div.className = "grid-item"
+//     masterDiv[0].appendChild(div)
+// }
+
+const addColumn = () => {
+    const masterDiv = document.getElementsByClassName("grid-container")
+    const div = document.createElement("div")
+    div.className = "grid-item"
+    masterDiv[0].appendChild(div)
+}
+
+const addRow = () => {
+    const masterDiv = document.getElementsByClassName("grid-container")
+    const div = document.createElement("div")
+    div.className = "grid-item"
+    masterDiv[0].appendChild(div)
+}
+
+const tb = document.getElementsByTagName ("td")
+const colors = document.getElementById ("colorSelector")
 
 
-Array.from(grids).forEach(v => v.addEventListener('mouseover', function() {
+Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
 
-    if (v.style.background === 'red') {
+   // console.log (colors.options.item(0).text)
+    //console.log (colors.options.item(1).text)
+   // console.log (colors.options.item(2).text)
+    //console.log (colors.options.item(3).text)
+    var colSel = colors.options[colors.selectedIndex].value
+    console.log (colSel)
 
-        v.style.background = 'white'
 
-    } else {
+    if (colSel == 'Yellow') {
 
-        v.style.background = 'red';
+        v.style.background = 'yellow'
+
+    } else if (colSel == "Blue") {
+
+        v.style.background = 'blue';
+
+    } else if (colSel == "Red") {
+
+        v.style.background = 'red'
+
+    } else if (colSel == 'Green') {
+
+        v.style.background = 'green'
     }
-  }));
-
-
-  Array.from (grids).forEach (x => x.addEventListener ('click', function () {
-
-    var newGrid = document.creatElement ('div')
-
-    newGrid.className = "grid-item"
-
-    gridParent[0].appendChild (newGrid)
-
   }));
