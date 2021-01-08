@@ -1,58 +1,29 @@
-// const addColumn = () => {
-//     document.getElementById("temp").innerHTML = "Add Column Clicked"
-// }
-
-// const addColumn = () => {
-//     const masterDiv = document.getElementsByClassName("grid-container")
-//     masterDiv[0].style.display = "block"
-//     const div = document.createElement("div")
-//     div.className = "grid-item"
-//     masterDiv[0].appendChild(div)
-// }
-
-// const addRow = () => {
-//     const masterDiv = document.getElementsByClassName("grid-container")
-//     masterDiv[0].style.display = "flex"
-//     const div = document.createElement("div")
-//     div.className = "grid-item"
-//     masterDiv[0].appendChild(div)
-// }
+let columns = 0
+let rows = 0
+const mainTable = document.getElementById("main-table")
 
 const addColumn = () => {
-    const masterDiv = document.getElementsByClassName("grid-container")
-    const div = document.createElement("div")
-    div.className = "grid-item"
-    masterDiv[0].appendChild(div)
+    columns += 1
+
+    const rows = document.getElementsByClassName("row")
+
+    for (let i=0; i<rows.length; i++) {
+        const data = document.createElement("td")
+        rows[i].appendChild(data);
+    }
 }
 
 const addRow = () => {
-    const masterDiv = document.getElementsByClassName("grid-container")
-    const div = document.createElement("div")
-    div.className = "grid-item"
-    masterDiv[0].appendChild(div)
-}
+    rows += 1
+    
+    const row = document.createElement("tr")
 
-const tb = document.getElementsByTagName ("td")
-const colors = document.getElementById ("colorSelect")
-console.log (colors.options.item(0))
+    row.classList.add("row")
 
-Array.from(tb).forEach(v => v.addEventListener('mouseover', function() {
+    mainTable.appendChild(row)
 
-
-    if (colors.options.item(0).text == 'Yellow') {
-
-        v.style.background = 'yellow'
-
-    } else if (colors.options.item(1).text == "Blue") {
-
-        v.style.background = 'blue';
-
-    } else if (colors.options.item(2).text == "Red") {
-
-        v.style.background = 'red'
-
-    } else if (colors.options.item(3).text == 'Green') {
-
-        v.style.background = 'green'
+    for (let i=0; i<columns; i++) {
+        const data = document.createElement("td")
+        row.appendChild(data)
     }
-  }));
+}
